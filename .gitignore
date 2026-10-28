@@ -657,3 +657,15 @@ runs/r18-9b/*-trial-*/transfer/*
 !runs/r11-docs/*-trial-*/provenance.json
 !runs/r16-9b/*-trial-*/provenance.json
 !runs/r18-9b/*-trial-*/provenance.json
+
+# Local ecommerce audit checkpoint and the files needed to run it on a Mac.
+!runs/chatbot-audit-local/
+!runs/chatbot-audit-local/.gitignore
+!runs/chatbot-audit-local/full-v1-study/
+!runs/chatbot-audit-local/full-v1-study/checkpoint/
+!runs/chatbot-audit-local/full-v1-study/checkpoint/**
+!runs/chatbot-audit-v1/
+!runs/chatbot-audit-v1/ask_local.py
+!runs/chatbot-audit-v1/questions.json
+!runs/chatbot-audit-v1/example-state.json
+!runs/chatbot-audit-v1/MAC.md

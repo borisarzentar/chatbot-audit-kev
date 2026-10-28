@@ -1,0 +1,44 @@
+{
+  "issue_resolved": {
+    "type": "noul",
+    "instructions": "The customer's issue was fully resolved within the session.",
+    "criteria": {
+      "true": "The need that drove the contact was met, or reliably set in motion, by the end of the session",
+      "false": "The need was unmet, partially handled, or depends on steps that never happened"
+    }
+  },
+  "factually_consistent": {
+    "type": "noul",
+    "instructions": "Everything the agent told the customer is consistent with the data returned by its tools.",
+    "criteria": {
+      "true": "Every statement made to the customer matches the tool results in the trace",
+      "false": "The agent told the customer something its own tool results do not support or contradict"
+    }
+  },
+  "policy_adherence": {
+    "type": "noul",
+    "instructions": "The agent's actions complied with the policies and procedures surfaced by its own tool calls during the session.",
+    "criteria": {
+      "true": "Every action respected the limits, approvals, and required steps stated in the session's policy data",
+      "false": "At least one action violated or skipped something the session's own policy data requires"
+    }
+  },
+  "escalation_needed": {
+    "type": "noul",
+    "instructions": "This session needs human follow-up or review.",
+    "criteria": {
+      "true": "A person must intervene: outstanding commitments, missing approvals, or unresolved customer needs remain",
+      "false": "Nothing remains that requires a person"
+    }
+  },
+  "customer_sentiment": {
+    "type": "choice",
+    "instructions": "What is the customer's sentiment at the close of the conversation?",
+    "criteria": {
+      "positive": "The customer ends pleased or grateful",
+      "neutral": "The customer ends matter-of-fact, neither pleased nor upset",
+      "negative": "The customer ends dissatisfied, frustrated, or angry",
+      "mixed": "The customer expresses clearly conflicting feelings at the close"
+    }
+  }
+}

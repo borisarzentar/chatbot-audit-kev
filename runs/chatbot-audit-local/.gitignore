@@ -1,0 +1,5 @@
+*
+!.gitignore
+!full-v1-study/
+!full-v1-study/checkpoint/
+!full-v1-study/checkpoint/**
