@@ -1,0 +1,838 @@
+{
+  "description": "Wording edits already present before the 9B switch. The requested refund amount remains available in the single-item order tool result. Labels and evidence are unchanged.",
+  "edits": [
+    {
+      "split": "train",
+      "id": "d76b90f6ab5b932a",
+      "path": "state.events[0].text",
+      "before": "Can you help with my monitor, order A-36231? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my monitor, order A-36231? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "0c54bfbf1573d282",
+      "path": "state.events[0].text",
+      "before": "Hello, I need help with order A-92942 for the toaster. It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Hello, I need help with order A-92942 for the toaster. It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "a56acdf60bc0f59d",
+      "path": "state.events[0].text",
+      "before": "Can you help with my air purifier, order A-95989? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my air purifier, order A-95989? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "68a1af8ceb7e55fc",
+      "path": "state.events[0].text",
+      "before": "Hello, I need help with order A-92942 for the toaster. It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Hello, I need help with order A-92942 for the toaster. It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "deef96e774d26e11",
+      "path": "state.events[0].text",
+      "before": "Can you help with my monitor, order A-36231? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my monitor, order A-36231? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "e6b6e23fdba80029",
+      "path": "state.events[0].text",
+      "before": "Can you help with my blender, order A-15927? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my blender, order A-15927? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "78dd4f2c6fe233e9",
+      "path": "state.events[0].text",
+      "before": "Can you help with my monitor, order A-36231? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my monitor, order A-36231? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "67009dc5298ce859",
+      "path": "state.events[0].text",
+      "before": "Can you help with my office chair, order A-82256? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my office chair, order A-82256? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "8318f6cb45f52d21",
+      "path": "state.events[0].text",
+      "before": "Can you help with my monitor, order A-36231? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my monitor, order A-36231? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "6095917db2ae08ec",
+      "path": "state.events[0].text",
+      "before": "I'm contacting you about A-26934. It contains a monitor. It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "I'm contacting you about A-26934. It contains a monitor. It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "f8d32d99eec26462",
+      "path": "state.events[0].text",
+      "before": "Can you help with my monitor, order A-36231? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my monitor, order A-36231? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "3c5a91554a42fcd7",
+      "path": "state.events[0].text",
+      "before": "Can you help with my monitor, order A-36231? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my monitor, order A-36231? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "ee842224b1b1ff48",
+      "path": "state.events[0].text",
+      "before": "I'm contacting you about A-26934. It contains a monitor. It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "I'm contacting you about A-26934. It contains a monitor. It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "30c9259e5dc4ebce",
+      "path": "state.events[0].text",
+      "before": "Can you help with my blender, order A-15927? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my blender, order A-15927? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "473f0d187423ff85",
+      "path": "state.events[0].text",
+      "before": "I'm contacting you about A-26934. It contains a monitor. It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "I'm contacting you about A-26934. It contains a monitor. It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "3a263aec705faa96",
+      "path": "state.events[0].text",
+      "before": "I'm contacting you about A-26934. It contains a monitor. It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "I'm contacting you about A-26934. It contains a monitor. It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "bf6e1c74f2a8b800",
+      "path": "state.events[0].text",
+      "before": "I'm contacting you about A-26934. It contains a monitor. It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "I'm contacting you about A-26934. It contains a monitor. It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "a36b65cdb1b918fc",
+      "path": "state.events[0].text",
+      "before": "Can you help with my blender, order A-15927? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my blender, order A-15927? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "87f5a09c772a1c81",
+      "path": "state.events[0].text",
+      "before": "Can you help with my air purifier, order A-95989? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my air purifier, order A-95989? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "c1d747bc120b47e9",
+      "path": "state.events[0].text",
+      "before": "Can you help with my monitor, order A-36231? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my monitor, order A-36231? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "d5ae810b01b8a3ab",
+      "path": "state.events[0].text",
+      "before": "Hello, I need help with order A-92942 for the toaster. It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Hello, I need help with order A-92942 for the toaster. It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "174904524fb6bba5",
+      "path": "state.events[0].text",
+      "before": "Hello, I need help with order A-92942 for the toaster. It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Hello, I need help with order A-92942 for the toaster. It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "642df95605b1d55e",
+      "path": "state.events[0].text",
+      "before": "Can you help with my blender, order A-15927? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my blender, order A-15927? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "95fe9ccfcea0a99c",
+      "path": "state.events[0].text",
+      "before": "Hello, I need help with order A-92942 for the toaster. It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Hello, I need help with order A-92942 for the toaster. It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "4739a071d1e48225",
+      "path": "state.events[0].text",
+      "before": "Can you help with my office chair, order A-82256? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my office chair, order A-82256? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "3a8f27ea22d0f2d8",
+      "path": "state.events[0].text",
+      "before": "Can you help with my air purifier, order A-95989? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my air purifier, order A-95989? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "cae4d842cfe3805c",
+      "path": "state.events[0].text",
+      "before": "Can you help with my office chair, order A-82256? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my office chair, order A-82256? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "b3a5c0b3f8a18ba4",
+      "path": "state.events[0].text",
+      "before": "Can you help with my monitor, order A-36231? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my monitor, order A-36231? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "ed8179cc17b555d5",
+      "path": "state.events[0].text",
+      "before": "I'm contacting you about A-26934. It contains a monitor. It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "I'm contacting you about A-26934. It contains a monitor. It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "17b6c9d6fff7ebe1",
+      "path": "state.events[0].text",
+      "before": "I'm contacting you about A-26934. It contains a monitor. It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "I'm contacting you about A-26934. It contains a monitor. It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "fadf0dcd5bef9c87",
+      "path": "state.events[0].text",
+      "before": "Can you help with my blender, order A-15927? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my blender, order A-15927? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "27bbac1984883c1d",
+      "path": "state.events[0].text",
+      "before": "Can you help with my air purifier, order A-95989? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my air purifier, order A-95989? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "8f2107460e71cf80",
+      "path": "state.events[0].text",
+      "before": "Can you help with my blender, order A-15927? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my blender, order A-15927? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "00db3b95181e7837",
+      "path": "state.events[0].text",
+      "before": "Hello, I need help with order A-92942 for the toaster. It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Hello, I need help with order A-92942 for the toaster. It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "de0e908038921273",
+      "path": "state.events[0].text",
+      "before": "Hello, I need help with order A-92942 for the toaster. It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Hello, I need help with order A-92942 for the toaster. It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "5a97976619b85d50",
+      "path": "state.events[0].text",
+      "before": "Can you help with my blender, order A-15927? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my blender, order A-15927? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "72e795b1a226918c",
+      "path": "state.events[0].text",
+      "before": "Can you help with my monitor, order A-36231? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my monitor, order A-36231? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "4972558bbe0711d4",
+      "path": "state.events[0].text",
+      "before": "Can you help with my air purifier, order A-95989? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my air purifier, order A-95989? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "b8f915a767a1be6b",
+      "path": "state.events[0].text",
+      "before": "Can you help with my blender, order A-15927? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my blender, order A-15927? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "e55b1b0e367d27be",
+      "path": "state.events[0].text",
+      "before": "I'm contacting you about A-26934. It contains a monitor. It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "I'm contacting you about A-26934. It contains a monitor. It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "fe9f08f419533089",
+      "path": "state.events[0].text",
+      "before": "Hello, I need help with order A-92942 for the toaster. It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Hello, I need help with order A-92942 for the toaster. It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "7b9f8c8bae1f1c33",
+      "path": "state.events[0].text",
+      "before": "Can you help with my blender, order A-15927? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my blender, order A-15927? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "9182f72a5cda00ad",
+      "path": "state.events[0].text",
+      "before": "Can you help with my blender, order A-15927? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my blender, order A-15927? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "cd5c6cfcaa641b26",
+      "path": "state.events[0].text",
+      "before": "Can you help with my air purifier, order A-95989? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my air purifier, order A-95989? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "338d9d2f76c0d4f2",
+      "path": "state.events[0].text",
+      "before": "Can you help with my blender, order A-15927? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my blender, order A-15927? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "8ebf34f362fcc85e",
+      "path": "state.events[0].text",
+      "before": "Can you help with my air purifier, order A-95989? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my air purifier, order A-95989? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "0ed7926ca9aa95cb",
+      "path": "state.events[0].text",
+      "before": "Can you help with my office chair, order A-82256? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my office chair, order A-82256? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "721f2389cfdbd00f",
+      "path": "state.events[0].text",
+      "before": "Hello, I need help with order A-92942 for the toaster. It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Hello, I need help with order A-92942 for the toaster. It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "cebcff2db8a9a588",
+      "path": "state.events[0].text",
+      "before": "Can you help with my air purifier, order A-95989? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my air purifier, order A-95989? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "9198f6208be67bc1",
+      "path": "state.events[0].text",
+      "before": "I'm contacting you about A-26934. It contains a monitor. It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "I'm contacting you about A-26934. It contains a monitor. It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "a9f2dc53b8411384",
+      "path": "state.events[0].text",
+      "before": "Hello, I need help with order A-92942 for the toaster. It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Hello, I need help with order A-92942 for the toaster. It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "4dfb2a187d5b93e6",
+      "path": "state.events[0].text",
+      "before": "I'm contacting you about A-26934. It contains a monitor. It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "I'm contacting you about A-26934. It contains a monitor. It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "cd64e82516d688ea",
+      "path": "state.events[0].text",
+      "before": "Can you help with my office chair, order A-82256? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my office chair, order A-82256? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "c5e40d4bc3d8f91e",
+      "path": "state.events[0].text",
+      "before": "Can you help with my office chair, order A-82256? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my office chair, order A-82256? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "40ca09550378511d",
+      "path": "state.events[0].text",
+      "before": "Can you help with my office chair, order A-82256? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my office chair, order A-82256? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "8acc69e504fe9621",
+      "path": "state.events[0].text",
+      "before": "Can you help with my monitor, order A-36231? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my monitor, order A-36231? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "904bd21a9c64fc60",
+      "path": "state.events[0].text",
+      "before": "Hello, I need help with order A-92942 for the toaster. It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Hello, I need help with order A-92942 for the toaster. It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "4cfee5dd9ed25a38",
+      "path": "state.events[0].text",
+      "before": "Can you help with my office chair, order A-82256? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my office chair, order A-82256? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "9f4685be5a59c969",
+      "path": "state.events[0].text",
+      "before": "I'm contacting you about A-26934. It contains a monitor. It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "I'm contacting you about A-26934. It contains a monitor. It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "f627f843057df8de",
+      "path": "state.events[0].text",
+      "before": "Can you help with my monitor, order A-36231? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my monitor, order A-36231? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "f2f033c66975eb99",
+      "path": "state.events[0].text",
+      "before": "Can you help with my monitor, order A-36231? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my monitor, order A-36231? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "5adfab2dfa963bb5",
+      "path": "state.events[0].text",
+      "before": "Can you help with my air purifier, order A-95989? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my air purifier, order A-95989? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "69103cb0ac7474b2",
+      "path": "state.events[0].text",
+      "before": "I'm contacting you about A-26934. It contains a monitor. It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "I'm contacting you about A-26934. It contains a monitor. It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "9c598452dde30b0b",
+      "path": "state.events[0].text",
+      "before": "I'm contacting you about A-26934. It contains a monitor. It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "I'm contacting you about A-26934. It contains a monitor. It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "dca410addd1ae57c",
+      "path": "state.events[0].text",
+      "before": "Can you help with my office chair, order A-82256? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my office chair, order A-82256? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "f5ff96b9561f68ad",
+      "path": "state.events[0].text",
+      "before": "Hello, I need help with order A-92942 for the toaster. It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Hello, I need help with order A-92942 for the toaster. It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "868648de0110b77c",
+      "path": "state.events[0].text",
+      "before": "Can you help with my blender, order A-15927? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my blender, order A-15927? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "3adfc2dbe4d01300",
+      "path": "state.events[0].text",
+      "before": "Can you help with my office chair, order A-82256? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my office chair, order A-82256? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "c2ad170896a64bd3",
+      "path": "state.events[0].text",
+      "before": "Can you help with my blender, order A-15927? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my blender, order A-15927? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "8383f4a4b38d65a2",
+      "path": "state.events[0].text",
+      "before": "Can you help with my blender, order A-15927? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my blender, order A-15927? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "0e905da5f98a167f",
+      "path": "state.events[0].text",
+      "before": "Can you help with my office chair, order A-82256? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my office chair, order A-82256? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "5a1e9f3b48097dec",
+      "path": "state.events[0].text",
+      "before": "Hello, I need help with order A-92942 for the toaster. It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Hello, I need help with order A-92942 for the toaster. It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "048078203cf63755",
+      "path": "state.events[0].text",
+      "before": "Can you help with my blender, order A-15927? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my blender, order A-15927? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "f21fa96d49997a12",
+      "path": "state.events[0].text",
+      "before": "Hello, I need help with order A-92942 for the toaster. It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Hello, I need help with order A-92942 for the toaster. It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "c5c93d16d79e4181",
+      "path": "state.events[0].text",
+      "before": "Can you help with my air purifier, order A-95989? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my air purifier, order A-95989? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "a9d8dd3e2a83167f",
+      "path": "state.events[0].text",
+      "before": "Hello, I need help with order A-92942 for the toaster. It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Hello, I need help with order A-92942 for the toaster. It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "7b8a76efab5dcd46",
+      "path": "state.events[0].text",
+      "before": "Can you help with my monitor, order A-36231? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my monitor, order A-36231? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "91e86ae6bcf2990c",
+      "path": "state.events[0].text",
+      "before": "Can you help with my monitor, order A-36231? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my monitor, order A-36231? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "7002302e59106057",
+      "path": "state.events[0].text",
+      "before": "Can you help with my office chair, order A-82256? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my office chair, order A-82256? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "4923b3d182e96e40",
+      "path": "state.events[0].text",
+      "before": "Can you help with my air purifier, order A-95989? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my air purifier, order A-95989? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "19294d7eca81da02",
+      "path": "state.events[0].text",
+      "before": "I'm contacting you about A-26934. It contains a monitor. It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "I'm contacting you about A-26934. It contains a monitor. It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "0ed409b540700989",
+      "path": "state.events[0].text",
+      "before": "I'm contacting you about A-26934. It contains a monitor. It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "I'm contacting you about A-26934. It contains a monitor. It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "129172785fb64776",
+      "path": "state.events[0].text",
+      "before": "Can you help with my blender, order A-15927? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my blender, order A-15927? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "f301b8fb568470d5",
+      "path": "state.events[0].text",
+      "before": "Hello, I need help with order A-92942 for the toaster. It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Hello, I need help with order A-92942 for the toaster. It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "987645b9435aac28",
+      "path": "state.events[0].text",
+      "before": "Hello, I need help with order A-92942 for the toaster. It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Hello, I need help with order A-92942 for the toaster. It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "fd4beaccd38a3598",
+      "path": "state.events[0].text",
+      "before": "Can you help with my air purifier, order A-95989? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my air purifier, order A-95989? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "2d87fff692b70599",
+      "path": "state.events[0].text",
+      "before": "Can you help with my office chair, order A-82256? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my office chair, order A-82256? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "4b1eafbebb4b266b",
+      "path": "state.events[0].text",
+      "before": "Can you help with my monitor, order A-36231? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my monitor, order A-36231? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "c5f435204be87230",
+      "path": "state.events[0].text",
+      "before": "Can you help with my air purifier, order A-95989? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my air purifier, order A-95989? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "ed2d3c806b4ebf5a",
+      "path": "state.events[0].text",
+      "before": "I'm contacting you about A-26934. It contains a monitor. It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "I'm contacting you about A-26934. It contains a monitor. It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "0a8b5bf819747d6d",
+      "path": "state.events[0].text",
+      "before": "Can you help with my office chair, order A-82256? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my office chair, order A-82256? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "83711465923e5883",
+      "path": "state.events[0].text",
+      "before": "Can you help with my office chair, order A-82256? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my office chair, order A-82256? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "62acb4f502c8dbf9",
+      "path": "state.events[0].text",
+      "before": "Can you help with my air purifier, order A-95989? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my air purifier, order A-95989? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "75348ef7ef355bdf",
+      "path": "state.events[0].text",
+      "before": "Can you help with my monitor, order A-36231? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my monitor, order A-36231? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "9958db24937eebfa",
+      "path": "state.events[0].text",
+      "before": "Can you help with my air purifier, order A-95989? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my air purifier, order A-95989? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "2fc376182f252467",
+      "path": "state.events[0].text",
+      "before": "I'm contacting you about A-26934. It contains a monitor. It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "I'm contacting you about A-26934. It contains a monitor. It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "5f230244dbdf1f25",
+      "path": "state.events[0].text",
+      "before": "Can you help with my office chair, order A-82256? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my office chair, order A-82256? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "fe2f4b9ce46151b1",
+      "path": "state.events[0].text",
+      "before": "Can you help with my blender, order A-15927? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my blender, order A-15927? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "3ca5b995ed2a911d",
+      "path": "state.events[0].text",
+      "before": "Can you help with my monitor, order A-36231? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my monitor, order A-36231? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "1d5297e02d9017a6",
+      "path": "state.events[0].text",
+      "before": "Can you help with my air purifier, order A-95989? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my air purifier, order A-95989? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "ceabaeb06ea9752a",
+      "path": "state.events[0].text",
+      "before": "Can you help with my air purifier, order A-95989? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my air purifier, order A-95989? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "train",
+      "id": "fc163b97170d6aae",
+      "path": "state.events[0].text",
+      "before": "Can you help with my office chair, order A-82256? It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Can you help with my office chair, order A-82256? It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "development",
+      "id": "8dbcfb2cde5450a5",
+      "path": "state.events[0].text",
+      "before": "Could someone handle A-79531 for me? I purchased a office chair. It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Could someone handle A-79531 for me? I purchased a office chair. It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "development",
+      "id": "358cffd0e377bd8d",
+      "path": "state.events[0].text",
+      "before": "Could someone handle A-79531 for me? I purchased a office chair. It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Could someone handle A-79531 for me? I purchased a office chair. It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "development",
+      "id": "6feddd94d8526879",
+      "path": "state.events[0].text",
+      "before": "Could someone handle A-79531 for me? I purchased a office chair. It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Could someone handle A-79531 for me? I purchased a office chair. It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "development",
+      "id": "dd11bc6ad4a7cc6a",
+      "path": "state.events[0].text",
+      "before": "Could someone handle A-79531 for me? I purchased a office chair. It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Could someone handle A-79531 for me? I purchased a office chair. It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "development",
+      "id": "622df4299ace0759",
+      "path": "state.events[0].text",
+      "before": "Could someone handle A-79531 for me? I purchased a office chair. It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Could someone handle A-79531 for me? I purchased a office chair. It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "development",
+      "id": "e0a1686d5dc1680a",
+      "path": "state.events[0].text",
+      "before": "Could someone handle A-79531 for me? I purchased a office chair. It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Could someone handle A-79531 for me? I purchased a office chair. It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "development",
+      "id": "c7fc7b55eb031a22",
+      "path": "state.events[0].text",
+      "before": "Could someone handle A-79531 for me? I purchased a office chair. It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Could someone handle A-79531 for me? I purchased a office chair. It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "development",
+      "id": "95eca277c7798eb6",
+      "path": "state.events[0].text",
+      "before": "Could someone handle A-79531 for me? I purchased a office chair. It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Could someone handle A-79531 for me? I purchased a office chair. It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "development",
+      "id": "7749b517f4980da6",
+      "path": "state.events[0].text",
+      "before": "Could someone handle A-79531 for me? I purchased a office chair. It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Could someone handle A-79531 for me? I purchased a office chair. It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "development",
+      "id": "20f46c46b03aebe5",
+      "path": "state.events[0].text",
+      "before": "Could someone handle A-79531 for me? I purchased a office chair. It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Could someone handle A-79531 for me? I purchased a office chair. It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "development",
+      "id": "a87e5df5f99ad97d",
+      "path": "state.events[0].text",
+      "before": "Could someone handle A-79531 for me? I purchased a office chair. It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Could someone handle A-79531 for me? I purchased a office chair. It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "development",
+      "id": "dca1547814fe2acd",
+      "path": "state.events[0].text",
+      "before": "Could someone handle A-79531 for me? I purchased a office chair. It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Could someone handle A-79531 for me? I purchased a office chair. It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "development",
+      "id": "1b0f85442a2ee457",
+      "path": "state.events[0].text",
+      "before": "Could someone handle A-79531 for me? I purchased a office chair. It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Could someone handle A-79531 for me? I purchased a office chair. It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "development",
+      "id": "591de53553ac4794",
+      "path": "state.events[0].text",
+      "before": "Could someone handle A-79531 for me? I purchased a office chair. It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Could someone handle A-79531 for me? I purchased a office chair. It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "development",
+      "id": "c93643ac49df96aa",
+      "path": "state.events[0].text",
+      "before": "Could someone handle A-79531 for me? I purchased a office chair. It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Could someone handle A-79531 for me? I purchased a office chair. It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "development",
+      "id": "fec9a39d96967f03",
+      "path": "state.events[0].text",
+      "before": "Could someone handle A-79531 for me? I purchased a office chair. It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Could someone handle A-79531 for me? I purchased a office chair. It arrived damaged. Please refund, I do not want a replacement."
+    },
+    {
+      "split": "development",
+      "id": "fe3f9d2a3d6d1a30",
+      "path": "state.events[0].text",
+      "before": "Could someone handle A-79531 for me? I purchased a office chair. It arrived damaged. Please refund exactly $499 for this item. I do not want a replacement.",
+      "after": "Could someone handle A-79531 for me? I purchased a office chair. It arrived damaged. Please refund, I do not want a replacement."
+    }
+  ]
+}

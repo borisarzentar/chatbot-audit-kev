@@ -1,0 +1,138 @@
+{
+  "version": 1,
+  "seed": 20261025,
+  "generator_sha256": "535bd8e6f4563d4350ad4746c19e72c26b243c8a4a5b6befc11428e5a2134d02",
+  "synthetic": true,
+  "split_unit": "scenario group, all counterfactual variants together",
+  "splits": {
+    "train": {
+      "records": 1944,
+      "groups": 120,
+      "labels": {
+        "issue_resolved": {
+          "false": 770,
+          "true": 1174
+        },
+        "factually_consistent": {
+          "false": 576,
+          "true": 1368
+        },
+        "policy_adherence": {
+          "false": 939,
+          "true": 1005
+        },
+        "escalation_needed": {
+          "true": 1561,
+          "false": 383
+        },
+        "customer_sentiment": {
+          "mixed": 514,
+          "positive": 488,
+          "negative": 496,
+          "neutral": 446
+        }
+      },
+      "sha256": "b382da04761dca12262e241b0201c379daa1c6747dd8f6c6a03de1af4e17dbc7",
+      "original_generated_sha256": "d49e2bb8d4bb03a4d61a7be08193e68e806820376bbac7fe22278c6ab027488f"
+    },
+    "calibration": {
+      "records": 324,
+      "groups": 20,
+      "labels": {
+        "issue_resolved": {
+          "true": 194,
+          "false": 130
+        },
+        "factually_consistent": {
+          "true": 228,
+          "false": 96
+        },
+        "policy_adherence": {
+          "true": 168,
+          "false": 156
+        },
+        "escalation_needed": {
+          "true": 258,
+          "false": 66
+        },
+        "customer_sentiment": {
+          "positive": 89,
+          "mixed": 71,
+          "negative": 80,
+          "neutral": 84
+        }
+      },
+      "sha256": "c1863056150a63ee00a82afa1b2f737d1c0526dade85c475b9cf62ded10de290"
+    },
+    "development": {
+      "records": 324,
+      "groups": 20,
+      "labels": {
+        "issue_resolved": {
+          "true": 196,
+          "false": 128
+        },
+        "factually_consistent": {
+          "true": 228,
+          "false": 96
+        },
+        "policy_adherence": {
+          "false": 159,
+          "true": 165
+        },
+        "escalation_needed": {
+          "true": 263,
+          "false": 61
+        },
+        "customer_sentiment": {
+          "negative": 68,
+          "mixed": 96,
+          "neutral": 82,
+          "positive": 78
+        }
+      },
+      "sha256": "4399654d23eb7067b99d07202edc15c9ade45b69772a5d7de686f480bb8e26b7",
+      "original_generated_sha256": "586364db25a1ebef188b62e2703f304d30e2743e80d408a8bd393ec6e9cdd69a"
+    },
+    "test": {
+      "records": 648,
+      "groups": 40,
+      "labels": {
+        "issue_resolved": {
+          "false": 257,
+          "true": 391
+        },
+        "factually_consistent": {
+          "false": 192,
+          "true": 456
+        },
+        "policy_adherence": {
+          "false": 309,
+          "true": 339
+        },
+        "escalation_needed": {
+          "true": 516,
+          "false": 132
+        },
+        "customer_sentiment": {
+          "neutral": 171,
+          "negative": 166,
+          "positive": 154,
+          "mixed": 157
+        }
+      },
+      "sha256": "d53150eb5038187f8df638696806777565c239926602aa7180850f81e775dbc2"
+    }
+  },
+  "limitations": [
+    "Shared programmatic rules across splits; held-out wording is not real-world generalization.",
+    "No observed future CSAT and no predicted_csat training labels.",
+    "Complete traces assumed; failed send_message explicitly means not delivered.",
+    "Labels are fixture rules, not independent human annotations."
+  ],
+  "local_state_edits": {
+    "file": "local-state-edits.json",
+    "count": 119,
+    "sha256": "01ac9b56e15311943feeadce31e68f210cd95be5784cb64d7ff89b82e0b6a610"
+  }
+}

@@ -3,3 +3,10 @@
 !full-v1-study/
 !full-v1-study/checkpoint/
 !full-v1-study/checkpoint/**
+!full-v1-study/calibration-raw/
+!full-v1-study/calibration-raw/rows.json
+!full-v1-study/calibration-raw/report.json
+!full-v1-study/trained/
+!full-v1-study/trained/rows.json
+!full-v1-study/trained/report.json
+!full-v1-study/calibration-summary.json
