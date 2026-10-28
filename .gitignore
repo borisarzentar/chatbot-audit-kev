@@ -1,3 +1,6 @@
+# VSCode
+.vscode
+
 # python
 .venv/
 __pycache__/
@@ -690,3 +693,6 @@ runs/r18-9b/*-trial-*/transfer/*
 !runs/chatbot-audit-local/full-v1-study/trained-calibrated/rows.json
 !runs/chatbot-audit-local/full-v1-study/trained-calibrated/report.json
 !runs/chatbot-audit-local/full-v1-study/trained-calibrated/verification.json
+
+# Local secrets (API keys)
+.env
