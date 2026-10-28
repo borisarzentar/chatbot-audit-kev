@@ -10,3 +10,7 @@
 !full-v1-study/trained/rows.json
 !full-v1-study/trained/report.json
 !full-v1-study/calibration-summary.json
+!full-v1-study/trained-calibrated/
+!full-v1-study/trained-calibrated/rows.json
+!full-v1-study/trained-calibrated/report.json
+!full-v1-study/trained-calibrated/verification.json

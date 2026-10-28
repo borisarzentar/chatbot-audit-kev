@@ -686,3 +686,7 @@ runs/r18-9b/*-trial-*/transfer/*
 !runs/chatbot-audit-local/full-v1-study/trained/rows.json
 !runs/chatbot-audit-local/full-v1-study/trained/report.json
 !runs/chatbot-audit-local/full-v1-study/calibration-summary.json
+!runs/chatbot-audit-local/full-v1-study/trained-calibrated/
+!runs/chatbot-audit-local/full-v1-study/trained-calibrated/rows.json
+!runs/chatbot-audit-local/full-v1-study/trained-calibrated/report.json
+!runs/chatbot-audit-local/full-v1-study/trained-calibrated/verification.json

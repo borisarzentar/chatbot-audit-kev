@@ -70,3 +70,11 @@ script cannot resolve this custom JSONL corpus to a registered Kev suite and
 records that limitation in the checkpoint. This is workload calibration only,
 not evidence of calibrated confidence on real conversations or other domains.
 `calibration-summary.json` records the split checks and the development results.
+
+A fresh CUDA benchmark of the saved calibrated checkpoint is in
+`runs/chatbot-audit-local/full-v1-study/trained-calibrated/`.
+Its `report.json` and `rows.json` cover all 324 development sessions and 1,620
+questions. `verification.json` compares it with the original raw benchmark:
+identical data and kernel environment, no changed answers, and no rejected or
+truncated sessions. Accuracy is 97.28%, ECE is 0.00461, and Brier score is 0.04101.
+The original `trained/` results remain the uncalibrated reference.
