@@ -12,6 +12,118 @@ Small Jev-like decision models you can train and run yourself.
 
 Kev is a family of small decision models built on Qwen3.5 and Qwen3.8 and based on the architecture described in [Jev's Architecture Unmasked](https://archerhume.com/posts/jevs-architecture-unmasked). You can use the pretrained weights or train your own. The API matches TypeSafe's [System One](https://docs.typesafe.ai/api), so you can point their Python SDK at your local server.
 
+## Chatbot Audit Model
+
+This fork adds a Kev model that audits customer-support chatbot sessions. You give it one session (the customer's messages, the agent's replies and every tool call with its result, as JSON) and it answers five questions about it:
+
+| Question | Type | Asks |
+|---|---|---|
+| `issue_resolved` | `noul` | Was the customer's issue fully resolved within the session? |
+| `factually_consistent` | `noul` | Does everything the agent said match its own tool results? |
+| `policy_adherence` | `noul` | Did the agent follow the policies its own tool calls returned? |
+| `escalation_needed` | `noul` | Does a person need to follow up? |
+| `customer_sentiment` | `choice` | Is the customer positive, neutral, negative or mixed at the end? |
+
+The exact wording is in [`questions.json`](runs/chatbot-audit-v1/questions.json) and an example session is in [`example-state.json`](runs/chatbot-audit-v1/example-state.json).
+
+The model is Kev-0.8B (`jaredpalmer/kev-0.8b@bf75a6a8`) fine-tuned for one epoch on 1,944 synthetic ecommerce sessions (LoRA rank 16, lr 2e-5, states up to 4,096 tokens; 85 minutes on an RTX 3060 Ti, 4.1 GB peak GPU memory). The temperature, 2.24, was then fitted on a separate calibration split. The checkpoint is in [`runs/chatbot-audit-local/full-v1-study/checkpoint`](runs/chatbot-audit-local/full-v1-study/checkpoint): a 43 MB adapter plus the pointer head. The base model, Qwen3.5-0.8B-Base, downloads from Hugging Face on first use.
+
+### Run the Audit Model
+
+On a Mac (MLX) or a machine with an NVIDIA GPU:
+
+```bash
+uv sync --extra serve --python 3.13
+uv run --extra serve python -m kev.serve \
+  --run runs/chatbot-audit-local/full-v1-study/checkpoint --port 8009
+```
+
+On Apple Silicon the startup message should say `via mlx`. Then, from a second terminal, audit a session:
+
+```bash
+uv run python runs/chatbot-audit-v1/ask_local.py runs/chatbot-audit-v1/example-state.json
+```
+
+Replace the path with your own session JSON. `ask_local.py` sends it with the five questions to `/v1/systemone` and prints the answers, so the TypeSafe SDK and the `curl` examples in [Quick Start](#quick-start) work the same way. [`MAC.md`](runs/chatbot-audit-v1/MAC.md) has more detail.
+
+### Audit Results
+
+All rows are the development split: 324 sessions, 1,620 questions, from scenario groups the model never trained on. ECE measures how far the confidence is from the real accuracy; Brier scores the whole probability distribution. Lower is better for both. "Automated at 5% error" is the share of answers you can accept automatically, most confident first, while keeping the error rate under 5%.
+
+Each result lives in `runs/audit-<hardware>-<split>-<model>[-server]/`: `mac-m2pro-16gb` is a MacBook Pro with an M2 Pro and 16 GB of memory (MLX, bf16), `pc-rtx3060ti` a PC with an NVIDIA RTX 3060 Ti (8 GB, CUDA, bf16) and `jev` TypeSafe's hosted API. The split is `development`, `calibration` or `decision-v7`. The model is `calibrated` (the shipped audit model), `uncalibrated` (the same weights at temperature 1) or `parent` (Kev-0.8B before fine-tuning). `-server` marks a run scored through `kev.serve` over HTTP instead of in-process; those rows carry no logits.
+
+> [!NOTE]
+> The checkpoint's `head.pt` records that its temperature was fitted on `runs/chatbot-audit-local/full-v1-study/calibration-raw/rows.json`. That file was later renamed, unchanged, to [`runs/audit-pc-rtx3060ti-calibration-uncalibrated/rows.json`](runs/audit-pc-rtx3060ti-calibration-uncalibrated/rows.json). The record in `head.pt` keeps the original path on purpose.
+
+| System | Accuracy | ECE | Brier | Automated at 5% error | Report |
+|---|---|---|---|---|---|
+| Kev-0.8B before fine-tuning (M2 Pro) | 0.591 | 0.191 | 0.528 | 0% | [report](runs/audit-mac-m2pro-16gb-development-parent/report.json) |
+| Jev (TypeSafe API) | 0.909 | 0.064 | 0.138 | 90% | [report](runs/audit-jev-development/report.json) |
+| Audit model, uncalibrated (M2 Pro) | 0.973 | 0.022 | 0.047 | 100% | [report](runs/audit-mac-m2pro-16gb-development-uncalibrated/report.json) |
+| **Audit model (M2 Pro, MLX)** | **0.973** | **0.004** | **0.041** | **100%** | [report](runs/audit-mac-m2pro-16gb-development-calibrated/report.json) |
+| Audit model (RTX 3060 Ti, CUDA) | 0.973 | 0.005 | 0.041 | 100% | [report](runs/audit-pc-rtx3060ti-development-calibrated/report.json) |
+
+The M2 Pro and RTX 3060 Ti runs differ by one correct answer in 1,620, inside the noise of a paired comparison. Median latency is 0.61 s per session on the M2 Pro and 0.43 s on the RTX 3060 Ti. The paired comparisons behind these statements are written by `kev.compare` as `runs/chatbot-audit-v1/compare-<candidate>-vs-<reference>.json` (local only, not in git).
+
+Know the limits before you rely on it:
+
+- Every session is synthetic, generated from one ecommerce template family. These numbers say the model learned this workload, not that it will be as accurate or as well calibrated on your real conversations. Label a few hundred real sessions and check before you set thresholds.
+- The temperature was fitted on different scenario groups from the same generator, not on independent data (`--allow-in-distribution`; see [`calibration-summary.json`](runs/chatbot-audit-local/full-v1-study/calibration-summary.json)).
+- It is a specialist. On Kev's general `decision-v7` development set (1,264 questions, M2 Pro) accuracy fell from 0.827 to 0.820 and ECE rose from 0.034 to 0.109 ([audit model](runs/audit-mac-m2pro-16gb-decision-v7-calibrated-server/report.json), [Kev-0.8B](runs/audit-mac-m2pro-16gb-decision-v7-parent-server/report.json)). Use the released Kev models for other questions.
+- The locked test split (`data/test.jsonl`, 648 sessions) has not been read. Keep it for a final check after you stop making changes.
+
+To reproduce a row, run the benchmark in-process (the first command) or against a running server (the second). Name the output after your own hardware, so results from different machines never mix:
+
+```bash
+KEV_BACKEND=mlx uv run --extra serve python -m kev.benchmark \
+  --run runs/chatbot-audit-local/full-v1-study/checkpoint \
+  --data runs/chatbot-audit-v1/data/development.jsonl --out runs/audit-mac-m2pro-16gb-development-calibrated
+
+uv run python -m kev.benchmark --remote http://127.0.0.1:8009 \
+  --data runs/chatbot-audit-v1/data/development.jsonl --out runs/audit-mac-m2pro-16gb-development-calibrated-server
+```
+
+Leave out `KEV_BACKEND=mlx` on a CUDA machine. `kev.benchmark` refuses an output directory that already exists, so move a committed result aside before you re-run it.
+
+### Fine-Tune the Audit Model Further
+
+The 1,944-session training split is not in this repository; the [manifest](runs/chatbot-audit-v1/data/manifest.json) records its hash and label counts. To continue training, write your own sessions in the format of [`data/development.jsonl`](runs/chatbot-audit-v1/data/development.jsonl): one JSON object per line with the session as `state` and the five questions, each with a `label` (`true`/`false` for `noul`, the option name for `customer_sentiment`). Real, labelled sessions from your own chatbot are the most useful thing you can add.
+
+Then start from this checkpoint with `--init_from`, so the run keeps what the audit model already learned. The base and revision must match the checkpoint, or the trainer refuses to load it:
+
+```bash
+uv run python -m kev.train \
+  --data my-sessions.jsonl \
+  --init_from runs/chatbot-audit-local/full-v1-study/checkpoint \
+  --base Qwen/Qwen3.5-0.8B-Base --base_revision dc7cdfe2ee4154fa7e30f5b51ca41bfa40174e68 \
+  --epochs 1 --lr 2e-5 --batch 1 --accum 2 --max_state 4096 \
+  --dtype bf16 --checkpointing 1 --device cuda \
+  --out runs/chatbot-audit-v2/checkpoint
+```
+
+These are the settings the current model was trained with; they fit in 4 GB of GPU memory. Train on CUDA: Apple GPUs have no fast kernels for this model's DeltaNet layers, so training on a Mac is very slow. On Windows, prefix the module with the local launcher, `uv run python runs/chatbot-audit-v1/local_runner.py kev.train ...`, which works around Unix-only imports (it also runs `kev.benchmark` and `calibrate_checkpoint`). To limit the drop on general questions, mix in Kev's own training data with `--suite evals/v7/decision-v7 --replay 2000`.
+
+A new checkpoint needs a new temperature. Score the calibration split raw, fit on it, then compare the development split against the table above. The result directories follow the same naming, with the new model's name in front of the hardware:
+
+```bash
+KEV_TEMPERATURE=1.0 uv run python -m kev.benchmark --run runs/chatbot-audit-v2/checkpoint \
+  --data runs/chatbot-audit-v1/data/calibration.jsonl --out runs/audit-v2-pc-rtx3060ti-calibration-uncalibrated
+
+uv run python scripts/calibrate_checkpoint.py --run runs/chatbot-audit-v2/checkpoint \
+  --rows runs/audit-v2-pc-rtx3060ti-calibration-uncalibrated/rows.json --allow-in-distribution
+
+uv run python -m kev.benchmark --run runs/chatbot-audit-v2/checkpoint \
+  --data runs/chatbot-audit-v1/data/development.jsonl --out runs/audit-v2-pc-rtx3060ti-development-calibrated
+
+uv run python -m kev.compare --candidate runs/audit-v2-pc-rtx3060ti-development-calibrated \
+  --reference runs/audit-pc-rtx3060ti-development-calibrated \
+  --out runs/chatbot-audit-v1/compare-v2-pc-rtx3060ti-development-calibrated-vs-pc-rtx3060ti-development-calibrated.json
+```
+
+`calibrate_checkpoint.py` writes the temperature into the checkpoint's `head.pt`; restart any running server afterwards. Fit on raw logits from a local benchmark: rows from `--remote` have no logits. If your sessions come from a different source than the synthetic calibration split, hold out part of your own data and fit on that instead, since a temperature is only as good as the data it was fitted on.
+
+The rest of this README describes the upstream Kev family the audit model is built on.
+
 ## Highlights
 
 - Yes/no (`noul`), multiple-choice (`choice`) and rating (`score`) questions in one request. The questions share the text but can't read each other.

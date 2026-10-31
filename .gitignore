@@ -682,17 +682,12 @@ runs/r18-9b/*-trial-*/transfer/*
 !runs/chatbot-audit-v1/data/calibration.evidence.jsonl
 !runs/chatbot-audit-v1/data/development.evidence.jsonl
 !runs/chatbot-audit-v1/data/test.evidence.jsonl
-!runs/chatbot-audit-local/full-v1-study/calibration-raw/
-!runs/chatbot-audit-local/full-v1-study/calibration-raw/rows.json
-!runs/chatbot-audit-local/full-v1-study/calibration-raw/report.json
-!runs/chatbot-audit-local/full-v1-study/trained/
-!runs/chatbot-audit-local/full-v1-study/trained/rows.json
-!runs/chatbot-audit-local/full-v1-study/trained/report.json
 !runs/chatbot-audit-local/full-v1-study/calibration-summary.json
-!runs/chatbot-audit-local/full-v1-study/trained-calibrated/
-!runs/chatbot-audit-local/full-v1-study/trained-calibrated/rows.json
-!runs/chatbot-audit-local/full-v1-study/trained-calibrated/report.json
-!runs/chatbot-audit-local/full-v1-study/trained-calibrated/verification.json
+# CUDA logits of the audit model, kept so its temperature fit can be reproduced.
+!runs/audit-pc-rtx3060ti-calibration-uncalibrated/rows.json
+!runs/audit-pc-rtx3060ti-development-uncalibrated/rows.json
+!runs/audit-pc-rtx3060ti-development-calibrated/rows.json
+!runs/audit-pc-rtx3060ti-development-calibrated/verification.json
 
 # Local secrets (API keys)
 .env

@@ -12,8 +12,9 @@ uv run --extra serve python -m kev.serve \
 
 The first start downloads the pinned Qwen base model from Hugging Face. The trained
 adapter and pointer head load from this repository. No manual conversion is needed.
-The startup message should say `via mlx`. This checkpoint has been tested on CUDA;
-its Apple Silicon execution has not yet been verified and probabilities may differ slightly.
+The startup message should say `via mlx`. It has been benchmarked on a MacBook Pro with
+an M2 Pro and 16 GB of memory: the same accuracy as on CUDA within one answer in 1,620
+(`runs/audit-mac-m2pro-16gb-development-calibrated/`), and probabilities that differ slightly.
 
 Open http://127.0.0.1:8009/docs to try the API. Or, from another terminal in the repository:
 
@@ -33,10 +34,11 @@ With the server running, use a second terminal in the repository:
 uv run python -m kev.benchmark \
   --remote http://127.0.0.1:8009 \
   --data runs/chatbot-audit-v1/data/development.jsonl \
-  --out runs/audit-mac-development
+  --out runs/audit-mac-m2pro-16gb-development-calibrated-server
 ```
 
-Choose a new output directory for each run. This evaluates all 324 development
+Name the output directory after your own hardware (`runs/audit-<hardware>-<split>-<model>[-server]`,
+as in README.md "Audit Results"); `kev.benchmark` refuses one that already exists. This evaluates all 324 development
 sessions and 1,620 questions through the actual Mac server. It writes `rows.json`
 and `report.json`. CUDA and MLX probabilities may differ; this is a Mac validation,
 not a promise of identical results. Remote rows do not contain raw logits and must
@@ -57,8 +59,8 @@ the fit can be reproduced without running another GPU evaluation:
 ```bash
 uv run python scripts/calibrate_checkpoint.py \
   --run runs/chatbot-audit-local/full-v1-study/checkpoint \
-  --rows runs/chatbot-audit-local/full-v1-study/calibration-raw/rows.json \
-  --transfer runs/chatbot-audit-local/full-v1-study/trained/rows.json \
+  --rows runs/audit-pc-rtx3060ti-calibration-uncalibrated/rows.json \
+  --transfer runs/audit-pc-rtx3060ti-development-uncalibrated/rows.json \
   --allow-in-distribution
 ```
 
@@ -72,9 +74,10 @@ not evidence of calibrated confidence on real conversations or other domains.
 `calibration-summary.json` records the split checks and the development results.
 
 A fresh CUDA benchmark of the saved calibrated checkpoint is in
-`runs/chatbot-audit-local/full-v1-study/trained-calibrated/`.
+`runs/audit-pc-rtx3060ti-development-calibrated/`.
 Its `report.json` and `rows.json` cover all 324 development sessions and 1,620
 questions. `verification.json` compares it with the original raw benchmark:
 identical data and kernel environment, no changed answers, and no rejected or
 truncated sessions. Accuracy is 97.28%, ECE is 0.00461, and Brier score is 0.04101.
-The original `trained/` results remain the uncalibrated reference.
+`runs/audit-pc-rtx3060ti-development-uncalibrated/` remains the uncalibrated reference.
+Both were run on a PC with an NVIDIA RTX 3060 Ti.
